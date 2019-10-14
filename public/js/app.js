@@ -29,7 +29,7 @@ weatherForm.addEventListener('submit', (e) => {
     }
     console.log('the search place is ' + search.value)
 
-    const url =  'http://localhost:3000/weather?address='+search.value
+    const url =  '/weather?address='+search.value
 
     messageOne.textContent = 'Loading Data'
     messageTwo.textContent = ' '
