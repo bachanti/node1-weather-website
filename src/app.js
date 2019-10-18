@@ -64,7 +64,7 @@ if (!req.query.address)  {
          return  res.send({error: error})
      }
 
-        forecast( latitude, longitude , (error , forecastData) => {
+        forecast( latitude, longitude , (error , {forecastData, maxTemperature, lowTemperature}) => {
 
             if (error )
               return  res.send({error: error})
@@ -74,7 +74,11 @@ if (!req.query.address)  {
                 forecast : forecastData,
                 location : location ,
                 latitude : latitude,
-                longitude : longitude
+                longitude : longitude,
+                maxTemperature : maxTemperature,
+                lowTemperature : lowTemperature
+
+
             })
            } 
      )  
